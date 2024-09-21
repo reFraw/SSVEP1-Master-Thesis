@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ssvep1</name>
+  <version>0.0.0</version>
+  <description>The ssvep1 package</description>
+
+ 
+  <maintainer email="refraw@todo.todo">refraw</maintainer>
+
+  <license>BSD</license>
+
+  <!-- <url type="website">http://wiki.ros.org/ssvep1</url> -->
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>robotics_function</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>thesis_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>kinova_msgs</build_depend>
+  <build_depend>kinova_driver</build_depend>
+
+  <build_export_depend>robotics_function</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <build_export_depend>thesis_msgs</build_export_depend>
+  <build_export_depend>actionlib</build_export_depend>
+
+  <exec_depend>robotics_function</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>thesis_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>actionlib</exec_depend>
+  <exec_depend>kinova_msgs</exec_depend>
+
+
+</package>

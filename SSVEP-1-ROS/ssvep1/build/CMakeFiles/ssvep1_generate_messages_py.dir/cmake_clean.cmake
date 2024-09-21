@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ssvep1_generate_messages_py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAction.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabActionFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabActionGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabActionResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseAction.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseActionFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseActionGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseActionResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabAndReleaseResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_GrabResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveAction.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveActionFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveActionGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveActionResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_MoveResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseAction.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseActionFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseActionGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseActionResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseFeedback.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseGoal.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/_ReleaseResult.py"
+  "devel/lib/python3/dist-packages/ssvep1/msg/__init__.py"
+  "devel/lib/python3/dist-packages/ssvep1/srv/__init__.py"
+  "devel/lib/python3/dist-packages/ssvep1/srv/_sendInitPose.py"
+  "devel/lib/python3/dist-packages/ssvep1/srv/_sendInitState.py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/ssvep1_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
