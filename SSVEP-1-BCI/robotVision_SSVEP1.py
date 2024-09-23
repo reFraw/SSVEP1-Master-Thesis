@@ -24,9 +24,10 @@ class DetectedObject:
 
 DETECTED = []
 
+COLLECTOR_PORT = 5683
+
 # Carica il modello YOLOv8
-model = YOLO("C:\\Users\\fabra\\Desktop\\Tesi\\Lavoro\\SSVEP-1-RobotVision\\yoloModel\\yolov8n.pt")  # Usa il modello YOLOv8 nano
-fileSave = "C:\\Users\\fabra\\Desktop\\Tesi\\Lavoro\\SSVEP-1-RobotVision\\xmlSaveFile\\test1.xml"
+model = YOLO("yoloModel/yolov8n.pt")  # Usa il modello YOLOv8 nano
 
 # Apriltag detector
 aprilDetector = ap.Detector(families="tag25h9")
@@ -258,7 +259,11 @@ if __name__ == "__main__":
 
     frequencies = compute_frequencies(args.screen_freq, args.max_objects)
 
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
     try:
+        sock.connect(("localhost", COLLECTOR_PORT))
+
         while True:
             if camera_type == 'realsense':
                 frames = camera.wait_for_frames()
@@ -313,7 +318,9 @@ if __name__ == "__main__":
                             print(f"[LABEL]: {label} - [Freq]: {freq} Hz - [Posizione (Camera)]: ({x:.4f}, {y:.4f}, {z:.4f}) - [Posizione (Marker)]: ({pMarker[0]:.4f}, {pMarker[1]:.4f}, {pMarker[2]:.4f}) - [Posizione (Robot)]: ({pRobot[0]:.4f}, {pRobot[1]:.4f}, {pRobot[2]:.4f}) - [CONFIDENCE]: {filtered_scores_labels[idx][0]:.2f}")
                         print("\n")
 
-                            
+                        serializedDetected = pickle.dumps(DETECTED)
+                        sock.sendall(serializedDetected)
+
                 else:
                     print("Acquisizione normale ripristinata.")
 
